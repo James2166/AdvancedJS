@@ -10,15 +10,22 @@ let apiWeather = {};
 let apiKey = '4b80bcbb7c6eb9f19b80e22dc74e682d';
 
 // Retrieves the current location
-navigator.geolocation.getCurrentPosition((data) => {
-    getWeather(data.coords.latitude, data.coords.longitude);
-    console.log(data);
-    console.log(data.coords);
 
-    if (!position) {
-        alert("We can't tell you the weather if we dont know where you are. Please allow us access to your location so we can give you the weather!")
-    }
-  });
+(function() {
+    function success(data) {
+        getWeather(data.coords.latitude, data.coords.longitude);
+    };
+    function error() {
+        alert("We can't give you the weather if we dont know where you are. Please allow us to access your location so we can give you the weather!");
+    };
+    if (!navigator.geolocation) {
+        alert("We're sorry, but it looks like Geolocation isn't supported by your browser!");
+} else {
+    navigator.geolocation.getCurrentPosition(success, error);
+};
+
+}());
+
 
 // Calls OpenWeather Api
 async function getWeather(lat, lon) {
