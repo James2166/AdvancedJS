@@ -1,0 +1,82 @@
+body {
+    height: auto;
+    width: auto;
+    background-image: url('cloudySky.webp');
+    background-repeat: repeat;
+    background-color: #047db4;
+}
+
+.header {
+    text-align: center;
+    color: #a8ddf6;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.city {
+    height: 50px;
+    width: auto;
+    text-align: center;
+}
+
+.city p {
+    font-size: 22px;
+    color: #a8ddf6;
+    margin: 0;
+}
+
+.fiveDays {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.days {
+    height: 430px;
+    width: 180px;
+    background-color:rgba(179, 179, 181, 0.3);
+    /* rgb(127, 255, 212, .3) */
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.days h2 {
+    display: flex;
+    justify-content: center;
+    color: #a8ddf6;
+    font-size: 30px;
+}
+
+.temp {
+    font-size: 40px;
+    color: #a8ddf6;
+}
+
+.max {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;;
+}
+
+.min {
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+}
+
+.weather-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.weather-icon img {
+    height: 150px;
+    width: 150px;
+}
